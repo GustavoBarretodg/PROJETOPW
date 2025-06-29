@@ -1,0 +1,26 @@
+<app-navegador
+  [title]="'ShareEvent'"
+  [primaryBtnText]="'Meus eventos'"
+  [secondaryBtnText]="'Meus ingressos'"
+  [disablePrimaryBtn]="true"
+  (submit)="handleSubmit($event)"
+  (navigate)="navigate()"
+></app-navegador>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Organize eventos incríveis com facilidade</h1>
+    <p>Crie, compartilhe e gerencie seus eventos em um só lugar com o ShareEvent.</p>
+    <button class="btn-cta">Comece agora</button>
+  </div>
+</section>
+
+<section class="features">
+  <div class="features-container">
+    <div class="feature-card" *ngFor="let feature of features">
+      <img [src]="feature.icon" alt="Ícone {{ feature.title }}" />
+      <h3>{{ feature.title }}</h3>
+      <p>{{ feature.description }}</p>
+    </div>
+  </div>
+</section>

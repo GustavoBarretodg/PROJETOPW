@@ -1,0 +1,28 @@
+<app-navegador
+  [title2]="'Olá Fulano'"
+  [primaryBtnText]="'Olá FULANO'"
+  [secondaryBtnText]="'Meu perfil'"
+  [disablePrimaryBtn]="false"
+></app-navegador>
+<div class="cards-wrapper">
+  <app-cards
+    tipo="evento"
+    imagemUrl="assets/imagens/so-track.jpg"
+    titulo="OCA BH"
+    data="13"
+    diaSemana="Sáb"
+    horario="19:00"
+    local="Belo Horizonte, MG"
+  />
+
+  <app-cards tipo="evento"
+    imagemUrl="assets/imagens/so-track.jpg"
+    titulo="Festival XYZ"
+    data="20"
+    diaSemana="Sex"
+    horario="21:00"
+    local="São Paulo, SP"
+  />
+
+  <app-cards tipo="novo" />
+</div>
