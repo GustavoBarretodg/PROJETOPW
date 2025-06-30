@@ -39,13 +39,15 @@ export class LoginComponent {
     })
   }
 
-  submit(){
-    this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
-      next: () => this.toastService.success("Login feito com sucesso!"),
-      error: () => this.toastService.error("Erro inesperado! Tente novamente mais tarde")
-    })
-  }
-
+ submit() {
+  this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
+    next: () => {
+      this.toastService.success("Login feito com sucesso!");
+      this.router.navigate(["profile"]); // Altere "/dashboard" para a rota que desejar
+    },
+    error: () => this.toastService.error("Erro inesperado! Tente novamente mais tarde")
+  });
+}
   navigate(){
     this.router.navigate(["signup"])
   }
